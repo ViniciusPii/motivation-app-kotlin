@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.viniciuspiih.motivation.R
+import com.viniciuspiih.motivation.infra.MotivationConstants
 import com.viniciuspiih.motivation.infra.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_splash.*
 
@@ -40,7 +41,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         val name = editName.text.toString()
 
         if (name != "") {
-            mSecurityPreferences.storeString("name", name)
+            mSecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         } else {
