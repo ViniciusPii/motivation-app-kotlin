@@ -1,7 +1,8 @@
-package com.viniciuspiih.motivation
+package com.viniciuspiih.motivation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.viniciuspiih.motivation.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
