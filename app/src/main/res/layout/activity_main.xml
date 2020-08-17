@@ -72,11 +72,11 @@
     <Button
         android:id="@+id/buttonNewPhrase"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/ripple_button"
         android:text="Nova Frase"
         android:textAllCaps="true"
         android:textColor="@color/white" />
