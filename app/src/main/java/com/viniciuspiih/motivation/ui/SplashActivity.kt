@@ -26,14 +26,26 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
         buttonSave.setOnClickListener(this)
 
+        verifyUser()
+
 
     }
+
 
     override fun onClick(v: View?) {
         val id = v?.id
 
         if (id == R.id.buttonSave) {
             handleSave()
+        }
+    }
+
+    private fun verifyUser() {
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        if (name != "") {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -44,6 +56,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
             mSecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         } else {
             Toast.makeText(this, "Preencha seu Nome!", Toast.LENGTH_LONG).show()
         }

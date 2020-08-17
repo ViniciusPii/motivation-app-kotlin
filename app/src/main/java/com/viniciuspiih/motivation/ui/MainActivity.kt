@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         mSecurityPreferences = SecurityPreferences(this)
-        textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        textName.text = "Olá, $name!"
 
         imageAll.setColorFilter(resources.getColor(R.color.colorAccent))
         handleNewPhrase()
@@ -70,6 +71,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun handleNewPhrase() {
         textPhrase.text = Mock().getPhrase(mPhraseFilter)
-
     }
 }
