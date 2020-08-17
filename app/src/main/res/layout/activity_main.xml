@@ -56,7 +56,9 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="32dp"
-        android:text="Frase"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:text="Insanidade é fazer sempre a mesma coisa e esperar um resultado diferente."
         android:textSize="22sp" />
 
     <View
